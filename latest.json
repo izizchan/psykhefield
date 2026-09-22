@@ -1,8 +1,8 @@
 {
-    "versionCode":  1,
-    "versionName":  "0.1.0",
+    "versionCode":  2,
+    "versionName":  "0.2.0",
     "exe":  "PsykheField.exe",
     "serverVersion":  "0.1.0",
-    "note":  "蛻晏屓繝ｪ繝ｪ繝ｼ繧ｹ",
-    "releasedAt":  "2026-09-23 01:40"
+    "note":  "クラッシュ修正・F9パネル修正・操作テストモード・スティック軸割り当て対応",
+    "releasedAt":  "2026-09-23 01:42"
 }
