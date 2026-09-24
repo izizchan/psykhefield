@@ -1,8 +1,8 @@
 {
-    "versionCode":  2,
-    "versionName":  "0.2.0",
+    "versionCode":  3,
+    "versionName":  "0.3.0",
     "exe":  "PsykheField.exe",
     "serverVersion":  "0.1.0",
-    "note":  "蛻晏屓繝ｪ繝ｪ繝ｼ繧ｹ",
-    "releasedAt":  "2026-09-24 00:16"
+    "note":  "入力プロトコル刷新(protocol 6)・攻撃の優先度とキャンセル窓・停止旋回のモーション・操作カスタマイズの同時押し",
+    "releasedAt":  "2026-09-24 11:58"
 }
