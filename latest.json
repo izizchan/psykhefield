@@ -5,6 +5,6 @@
     "serverExe":  "psykhe-server.exe",
     "serverVersionCode":  4,
     "serverVersion":  "0.4.0",
-    "note":  null,
-    "releasedAt":  "2026-09-27 03:24"
+    "note":  "server release plus auto update",
+    "releasedAt":  "2026-09-27 03:28"
 }
