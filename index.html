@@ -24,13 +24,20 @@
 <h1>PsykheField</h1>
 <p class="lead">マルチプレイヤー対戦アクションのクライアント配布ページ。<strong>非公開の個人プロジェクト。</strong></p>
 
-<h2>クライアント（Windows）</h2>
+<h2>クライアント（Windows,GODOT製）</h2>
 <p>
   <a class="go primary" href="PsykheField.exe" id="exe">PsykheField.exe をダウンロード</a>
   <span class="ver" id="ver"></span>
 </p>
 <p class="none">クライアントは起動時にこのページの <code>latest.json</code> を見て、新しい版があれば
 自分で取ってきて入れ替わる（設定不要）。</p>
+
+<h2>サーバー（Windows,Rust製）</h2>
+<p>
+  <a class="go primary" href="https://github.com/izizchan/psykhefield/raw/refs/heads/main/psykhe-server.exe" id="exe">psykhe-server.exe をダウンロード</a>
+  <span class="ver" id="ver"></span>
+</p>
+
 
 <script>
 fetch('latest.json?t=' + Date.now())
