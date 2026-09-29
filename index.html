@@ -17,37 +17,41 @@
  .go.primary{border-color:#2b8;color:#2b8;font-weight:600}
  code{background:#8882;padding:.1rem .3rem;border-radius:.2rem;font-size:.85rem}
  .ver{font-size:.85rem;color:#888;margin-left:.4rem}
+ .kv{display:grid;grid-template-columns:max-content 1fr;gap:.15rem .8rem;margin:.4rem 0;font-size:.9rem}
+ .kv dt{color:#888}
+ .kv dd{margin:0}
 </style>
 </head>
 <body>
 
 <h1>PsykheField</h1>
-<p class="lead">マルチプレイヤー対戦アクションのクライアント配布ページ。<strong>非公開の個人プロジェクト。</strong></p>
+<p class="lead">非公開</p>
 
-<h2>クライアント（Windows,GODOT製）</h2>
+<h2>クライアント（Windows / Godot）</h2>
 <p>
-  <a class="go primary" href="PsykheField.exe" id="exe">PsykheField.exe をダウンロード</a>
+  <a class="go primary" href="PsykheField.exe" id="exe">PsykheField.exe</a>
   <span class="ver" id="ver"></span>
 </p>
-<p class="none">クライアントは起動時にこのページの <code>latest.json</code> を見て、新しい版があれば
-自分で取ってきて入れ替わる（設定不要）。</p>
-<p class="none" id="proto"></p>
+<dl class="kv">
+  <dt>自己更新</dt><dd>自動</dd>
+</dl>
 
-<h2>サーバー（Windows,Rust製）</h2>
+<h2>サーバー（Windows / Rust）</h2>
 <p>
-  <a class="go primary" href="psykhe-server.exe" id="srv">psykhe-server.exe をダウンロード</a>
+  <a class="go primary" href="psykhe-server.exe" id="srv">psykhe-server.exe</a>
   <span class="ver" id="srvver"></span>
-</p>
-<p>
   <a class="go" href="run_server.bat" id="srvbat">run_server.bat</a>
-  <span class="none">exe と同じ場所に置くと、エラーで終了した時に窓が残って理由が読める</span>
 </p>
-<p class="none">引数なしで起動すると <code>--local</code> 相当で動く（ボット 8 体、クライアントの接続先
-<code>127.0.0.1:7878</code>、戦闘ログ <code>127.0.0.1:7879</code>）。
-オプションは <code>psykhe-server.exe --help</code>。
-サーバーもクライアントと同じく <code>latest.json</code> を見て自分で入れ替わる
-（<code>--no-update</code> で切れる）。</p>
+<dl class="kv">
+  <dt>自己更新</dt><dd>自動（<code>--no-update</code> で停止）</dd>
+  <dt>引数なしの既定</dt><dd><code>--local</code> / ボット 8 / <code>127.0.0.1:7878</code> / ログ <code>127.0.0.1:7879</code></dd>
+  <dt>オプション</dt><dd><code>psykhe-server.exe --help</code></dd>
+</dl>
 
+<h2>共通</h2>
+<dl class="kv">
+  <dt>通信プロトコル</dt><dd id="proto"></dd>
+</dl>
 
 <script>
 // 版とリンク先は latest.json だけを見る（HTML に版を書かない: 書き換え忘れで食い違うため）
@@ -65,12 +69,8 @@ fetch('latest.json?t=' + Date.now())
         'v' + j.serverVersion + build(j.serverVersionCode) + when;
     }
     if (j.serverExe) document.getElementById('srv').href = j.serverExe;
-    // プロトコル版はワイヤ互換の番号。これが違う組み合わせでは接続できない（サーバーが弾く）
-    if (j.protocolVersion) {
-      document.getElementById('proto').textContent =
-        '通信プロトコル v' + j.protocolVersion + '：クライアントとサーバーはこの番号が同じもの同士でしか繋がらない'
-        + '（違うと接続時に弾かれる。上の 2 つは常に同じ回で出しているので、揃えてダウンロードすれば合う）';
-    }
+    // ワイヤ互換の番号（これが違う組み合わせでは接続できない）
+    if (j.protocolVersion) document.getElementById('proto').textContent = 'v' + j.protocolVersion;
   })
   .catch(() => {});
 </script>
