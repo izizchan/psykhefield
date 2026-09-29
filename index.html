@@ -31,6 +31,7 @@
 </p>
 <p class="none">クライアントは起動時にこのページの <code>latest.json</code> を見て、新しい版があれば
 自分で取ってきて入れ替わる（設定不要）。</p>
+<p class="none" id="proto"></p>
 
 <h2>サーバー（Windows,Rust製）</h2>
 <p>
@@ -54,13 +55,22 @@ fetch('latest.json?t=' + Date.now())
   .then(r => r.json())
   .then(j => {
     var when = j.releasedAt ? '（' + j.releasedAt + '）' : '';
-    document.getElementById('ver').textContent = 'v' + j.versionName + when;
+    // 版は 2 系統ある: 表示用の名前（0.5.0）と、自己更新の判定に使うビルド番号（整数）。
+    // クライアントとサーバーはビルド番号を別に持つ（揃えて出しているが、判定は別）
+    var build = function (code) { return code ? ' build ' + code : ''; };
+    document.getElementById('ver').textContent = 'v' + j.versionName + build(j.versionCode) + when;
     if (j.exe) document.getElementById('exe').href = j.exe;
-    // サーバーは版が別番号（serverVersion / serverVersionCode）。無い古い latest.json でも壊れないように
     if (j.serverVersion) {
-      document.getElementById('srvver').textContent = 'v' + j.serverVersion + when;
+      document.getElementById('srvver').textContent =
+        'v' + j.serverVersion + build(j.serverVersionCode) + when;
     }
     if (j.serverExe) document.getElementById('srv').href = j.serverExe;
+    // プロトコル版はワイヤ互換の番号。これが違う組み合わせでは接続できない（サーバーが弾く）
+    if (j.protocolVersion) {
+      document.getElementById('proto').textContent =
+        '通信プロトコル v' + j.protocolVersion + '：クライアントとサーバーはこの番号が同じもの同士でしか繋がらない'
+        + '（違うと接続時に弾かれる。上の 2 つは常に同じ回で出しているので、揃えてダウンロードすれば合う）';
+    }
   })
   .catch(() => {});
 </script>
