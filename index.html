@@ -34,19 +34,33 @@
 
 <h2>サーバー（Windows,Rust製）</h2>
 <p>
-  <a class="go primary" href="https://github.com/izizchan/psykhefield/raw/refs/heads/main/psykhe-server.exe" id="exe">psykhe-server.exe をダウンロード</a>
-  <span class="ver" id="ver"></span>
+  <a class="go primary" href="psykhe-server.exe" id="srv">psykhe-server.exe をダウンロード</a>
+  <span class="ver" id="srvver"></span>
 </p>
+<p>
+  <a class="go" href="run_server.bat" id="srvbat">run_server.bat</a>
+  <span class="none">exe と同じ場所に置くと、エラーで終了した時に窓が残って理由が読める</span>
+</p>
+<p class="none">引数なしで起動すると <code>--local</code> 相当で動く（ボット 8 体、クライアントの接続先
+<code>127.0.0.1:7878</code>、戦闘ログ <code>127.0.0.1:7879</code>）。
+オプションは <code>psykhe-server.exe --help</code>。
+サーバーもクライアントと同じく <code>latest.json</code> を見て自分で入れ替わる
+（<code>--no-update</code> で切れる）。</p>
 
 
 <script>
+// 版とリンク先は latest.json だけを見る（HTML に版を書かない: 書き換え忘れで食い違うため）
 fetch('latest.json?t=' + Date.now())
   .then(r => r.json())
   .then(j => {
-    document.getElementById('ver').textContent =
-      'v' + j.versionName + '（' + (j.releasedAt || '') + '）' +
-      (j.serverVersion ? ' / server v' + j.serverVersion : '');
+    var when = j.releasedAt ? '（' + j.releasedAt + '）' : '';
+    document.getElementById('ver').textContent = 'v' + j.versionName + when;
     if (j.exe) document.getElementById('exe').href = j.exe;
+    // サーバーは版が別番号（serverVersion / serverVersionCode）。無い古い latest.json でも壊れないように
+    if (j.serverVersion) {
+      document.getElementById('srvver').textContent = 'v' + j.serverVersion + when;
+    }
+    if (j.serverExe) document.getElementById('srv').href = j.serverExe;
   })
   .catch(() => {});
 </script>
