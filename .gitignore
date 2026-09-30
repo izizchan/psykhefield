@@ -1,0 +1,9 @@
+# サーバー exe をこの場で実行した時に隣に作られるもの。配るものではない
+# （release.ps1 は git add -A するので、無視しないと公開ページに載ってしまう）
+psykhe-records.json
+psykhe-server-error.log
+run-server-last.bat
+run-server*.bat
+
+# クライアントの操作設定を書き出したもの（個人の設定。配布物ではない）
+psykhe_controls_*.json
