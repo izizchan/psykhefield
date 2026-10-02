@@ -1,11 +1,11 @@
 {
-    "versionCode":  261003000533,
-    "versionName":  "12.cl261003000533",
+    "versionCode":  261003011825,
+    "versionName":  "12.cl261003011825",
     "exe":  "PsykheField.exe",
     "serverExe":  "psykhe-server.exe",
-    "serverVersionCode":  261003000533,
-    "serverVersion":  "12.sv261003000533",
+    "serverVersionCode":  261003011825,
+    "serverVersion":  "12.sv261003011825",
     "protocolVersion":  12,
     "note":  "",
-    "releasedAt":  "2026-10-03 00:10"
+    "releasedAt":  "2026-10-03 01:23"
 }
