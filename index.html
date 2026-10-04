@@ -39,14 +39,10 @@
 <p>
   <a class="go primary" href="psykhe-server.exe" id="srv">psykhe-server.exe</a>
   <span class="ver" id="srvver"></span>
-  コード署名をしていないため、初回Windowsの警告が表示されます。
 </p>
 <dl class="kv">
-  <dt>自己更新</dt><dd>自動（<code>--no-update</code> で停止）</dd>
   <dt>起動設定保存（次回起動時に同じオプションで開始するbat）</dt><dd><code>run-server-last.bat</code></dd>
-  <dt>エラー記録</dt><dd><code>psykhe-server-error.log</code></dd>
   <dt>初期接続ポート（ネットから接続する場合 0.0.0.0:7878で公開）</dt><dd><code>127.0.0.1:7878</code></dd>
-  <dt>初期戦闘ログ</dt><dd><code>127.0.0.1:7879</code></dd>
   <dt>オプション一覧</dt><dd><code>psykhe-server.exe --help</code></dd>
 </dl>
 
@@ -54,6 +50,57 @@
 <dl class="kv">
   <dt>通信プロトコル</dt><dd id="proto"></dd>
 </dl>
+
+<h2>内容説明</h2>
+<pre>
+開発中のバーチャロンライクな操作感のマルチプレイ対戦ゲーム
+
+サーバーの特徴:
+  - サーバーで全ての物理判定処理を行う
+  - 通信状態をみてプレイヤーが近づける距離を制限
+  - ロールバック処理で高レスポンスを実現
+
+ゲームの特徴:
+  - ブーストゲージによる速度調整
+  - ロックオンボタン＋ダッシュ攻撃時の自動ロックオン
+  - 被ロックオン状態の表示
+  - ガード＋攻撃による近接モード切替
+  - 爆風の自爆、味方攻撃アリ
+
+ゲームルール（サーバー側で設定）:
+  - エンドレス バトルロワイヤル: 最大連続破壊数の記録モード
+  - チーム戦: COOP/PvP/PvPvE チーム人数×3の連続勝利数合計を先に取ったチームの勝利
+
+SE,ロボットモデル,ステージ配置やギミックは仮設状態です。
+今後VRM形式の読込みなどを付けていく予定ですが、
+遊ぶためのゲーム部分を先に開発しています。
+</pre>
+
+<pre>
+A multiplayer combat game currently in development with a “Virtual-On”-like control scheme
+
+Server Features:
+  - All physics calculations are handled by the server
+  - Limits the distance players can approach each other based on network conditions
+  - Achieves high responsiveness through rollback processing
+
+Game Features:
+  - Speed control via a boost gauge
+  - Auto-lock-on when using the lock-on button + dash attack
+  - Display of locked-on status
+  - Switch between close-range and long-range modes by guarding and attacking
+  - Explosions can cause self-destruction and damage allies
+
+Game Rules (Set on the server side):
+  - Endless Battle Royale: A record-breaking mode for the highest consecutive destruction count
+  - Team Battle: COOP/PvP/PvPvE The first team to reach a total of (team size × 3) consecutive victories wins
+
+Sound effects, robot models, stage layouts, and mechanics are currently in a provisional state.
+We plan to add VRM file import support in the future,
+but we are prioritizing the development of the core gameplay first.
+
+</pre>
+
 
 <script>
 // 版とリンク先は latest.json だけを見る（HTML に版を書かない: 書き換え忘れで食い違うため）
