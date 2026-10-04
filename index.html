@@ -32,27 +32,21 @@
 <h2>クライアント（Windows / Godot）</h2>
 <p>
   <a class="go primary" href="PsykheField.exe" id="exe">PsykheField.exe</a>
-  <p class="lead">まだコード署名をしていないので、Windowsの警告が表示される状態です。</p>
   <span class="ver" id="ver"></span>
+  コード署名をしていないため、初回Windowsの警告が表示されます。
 </p>
-<dl class="kv">
-  <dt>自己更新</dt><dd>自動</dd>
-</dl>
-
 <h2>サーバー（Windows / Rust）</h2>
 <p>
   <a class="go primary" href="psykhe-server.exe" id="srv">psykhe-server.exe</a>
-  <p class="lead">まだコード署名をしていないので、Windowsの警告が表示される状態です。</p>
   <span class="ver" id="srvver"></span>
+  コード署名をしていないため、初回Windowsの警告が表示されます。
 </p>
 <dl class="kv">
   <dt>自己更新</dt><dd>自動（<code>--no-update</code> で停止）</dd>
-  <dt>引数なしで起動</dt><dd>窓の大きさを合わせ、設定を選ぶメニューを出す</dd>
-  <dt>起動設定の保存</dt><dd><code>run-server-last.bat</code>（改名すれば固定の起動設定になる）</dd>
+  <dt>起動設定保存（次回起動時に同じオプションで開始するbat）</dt><dd><code>run-server-last.bat</code></dd>
   <dt>エラー記録</dt><dd><code>psykhe-server-error.log</code></dd>
-  <dt>既定</dt><dd><code>--local</code> / ボット 8 / 上限 26 人</dd>
-  <dt>接続ポート</dt><dd><code>127.0.0.1:7878</code></dd>
-  <dt>戦闘ログ</dt><dd><code>127.0.0.1:7879</code></dd>
+  <dt>初期接続ポート（ネットから接続する場合 0.0.0.0:7878で公開）</dt><dd><code>127.0.0.1:7878</code></dd>
+  <dt>初期戦闘ログ</dt><dd><code>127.0.0.1:7879</code></dd>
   <dt>オプション一覧</dt><dd><code>psykhe-server.exe --help</code></dd>
 </dl>
 
