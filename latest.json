@@ -1,11 +1,13 @@
 {
-    "versionCode":  261012113652,
-    "versionName":  "13.cl261012113652",
+    "versionCode":  261014122231,
+    "versionName":  "13.cl261014122231",
     "exe":  "PsykheField.exe",
     "serverExe":  "psykhe-server.exe",
-    "serverVersionCode":  261012113652,
-    "serverVersion":  "13.sv261012113652",
+    "serverVersionCode":  261014122231,
+    "serverVersion":  "13.sv261014122231",
     "protocolVersion":  13,
     "note":  "",
-    "releasedAt":  "2026-10-12 22:58"
+    "releasedAt":  "2026-10-14 12:25",
+    "exeUrl":  "https://github.com/izizchan/psykhefield/releases/download/r261014122231-261014122231/PsykheField.exe",
+    "serverExeUrl":  "https://github.com/izizchan/psykhefield/releases/download/r261014122231-261014122231/psykhe-server.exe"
 }
