@@ -112,13 +112,16 @@ fetch('latest.json?t=' + Date.now())
     // 版は 2 系統ある: 表示用の名前（0.5.0）と、自己更新の判定に使うビルド番号（整数）。
     // クライアントとサーバーはビルド番号を別に持つ（揃えて出しているが、判定は別）
     var build = function (code) { return code ? ' build ' + code : ''; };
-    document.getElementById('ver').textContent = 'v' + j.versionName + build(j.versionCode) + when;
-    if (j.exe) document.getElementById('exe').href = j.exe;
+    document.getElementById('ver').textContent = 'v' + j.versionName + build(j.clientVersionCode || j.versionCode) + when;
+    // exe は GitHub Releases の最新（exeUrl / serverExeUrl）。無ければこのページに置いた exe
+    var exe = j.exeUrl || j.exe;
+    if (exe) document.getElementById('exe').href = exe;
     if (j.serverVersion) {
       document.getElementById('srvver').textContent =
         'v' + j.serverVersion + build(j.serverVersionCode) + when;
     }
-    if (j.serverExe) document.getElementById('srv').href = j.serverExe;
+    var srv = j.serverExeUrl || j.serverExe;
+    if (srv) document.getElementById('srv').href = srv;
     // ワイヤ互換の番号（これが違う組み合わせでは接続できない）
     if (j.protocolVersion) document.getElementById('proto').textContent = 'v' + j.protocolVersion;
   })
