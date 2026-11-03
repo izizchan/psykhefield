@@ -6,7 +6,7 @@
 
 ## クライアント（Windows）
 
-[PsykheField.exe をダウンロード](PsykheField.exe)（版の情報は [latest.json](latest.json)）
+[PsykheField.exe をダウンロード](https://github.com/izizchan/psykhefield/releases/latest/download/PsykheField.exe)（GitHub Releases の最新。版の情報は [latest.json](latest.json)）
 
 クライアントは起動時にこのページの `latest.json` を見て、自分より新しい版があれば
 実行ファイルを取ってきて入れ替わる（`clients/godot-viewer/scripts/AutoUpdate.gd`）。

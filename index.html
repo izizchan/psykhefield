@@ -31,7 +31,7 @@
 
 <h2>クライアント（Windows / Godot）</h2>
 <p>
-  <a class="go primary" href="PsykheField.exe" id="exe">PsykheField.exe</a>
+  <a class="go primary" href="https://github.com/izizchan/psykhefield/releases/latest/download/PsykheField.exe" id="exe">PsykheField.exe</a>
   <span class="ver" id="ver"></span>
   コード署名をしていないため、初回Windowsの警告が表示されます。
 </p>
@@ -45,6 +45,16 @@
   <dt>初期接続ポート（ネットから接続する場合 0.0.0.0:7878で公開）</dt><dd><code>127.0.0.1:7878</code></dd>
   <dt>オプション一覧</dt><dd><code>psykhe-server.exe --help</code></dd>
 </dl>
+
+<h2>最新版一括DL（クライアント + サーバー）</h2>
+<p>
+  <a class="go primary" href="https://github.com/izizchan/psykhefield/releases/latest/download/PsykheField-all.zip">PsykheField-all.zip</a>
+  <span class="ver">上の 2 つと同じ最新版を 1 つの zip にしたもの</span>
+</p>
+
+<h2>安定版</h2>
+<p class="none">動作を確かめて安定版にした組み合わせ（新しい順）。zip を展開したまま使うと、その版のまま動きます（自動更新しません）。</p>
+<dl class="kv" id="stables"><dt>読み込み中…</dt><dd></dd></dl>
 
 <h2>共通</h2>
 <dl class="kv">
@@ -113,7 +123,8 @@ fetch('latest.json?t=' + Date.now())
     // クライアントとサーバーはビルド番号を別に持つ（揃えて出しているが、判定は別）
     var build = function (code) { return code ? ' build ' + code : ''; };
     document.getElementById('ver').textContent = 'v' + j.versionName + build(j.clientVersionCode || j.versionCode) + when;
-    // exe は GitHub Releases の最新（exeUrl / serverExeUrl）。無ければこのページに置いた exe
+    // exe は GitHub Releases の最新（exeUrl / serverExeUrl）。読めなければ、クライアントは HTML に書いた
+    // Releases の最新への固定リンク、サーバーはこのページに置いた exe のまま
     var exe = j.exeUrl || j.exe;
     if (exe) document.getElementById('exe').href = exe;
     if (j.serverVersion) {
@@ -126,6 +137,35 @@ fetch('latest.json?t=' + Date.now())
     if (j.protocolVersion) document.getElementById('proto').textContent = 'v' + j.protocolVersion;
   })
   .catch(() => {});
+
+// 安定版: GitHub Releases のうちタグが stable- で始まるもの（stable.bat が作る）。zip へ直接リンクする
+fetch('https://api.github.com/repos/izizchan/psykhefield/releases?per_page=100')
+  .then(r => r.json())
+  .then(list => {
+    var box = document.getElementById('stables');
+    box.textContent = '';
+    var rows = (Array.isArray(list) ? list : []).filter(r => (r.tag_name || '').indexOf('stable-') === 0);
+    rows.sort((a, b) => (b.published_at || '').localeCompare(a.published_at || ''));
+    rows.forEach(r => {
+      var zip = (r.assets || []).find(a => /\.zip$/i.test(a.name));
+      if (!zip) return;
+      var dt = document.createElement('dt');
+      dt.textContent = (r.published_at || '').slice(0, 10);
+      var dd = document.createElement('dd');
+      var a = document.createElement('a');
+      a.href = zip.browser_download_url;
+      a.textContent = (r.name || r.tag_name).replace(/^安定版\s*/, '');
+      dd.appendChild(a);
+      dd.appendChild(document.createTextNode('（' + (zip.size / 1048576).toFixed(1) + ' MB）'));
+      box.appendChild(dt);
+      box.appendChild(dd);
+    });
+    if (!box.firstChild) box.innerHTML = '<dt>まだありません</dt><dd></dd>';
+  })
+  .catch(() => {
+    document.getElementById('stables').innerHTML =
+      '<dt>一覧を読めませんでした</dt><dd><a href="https://github.com/izizchan/psykhefield/releases">GitHub Releases</a></dd>';
+  });
 </script>
 </body>
 </html>
