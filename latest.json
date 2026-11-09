@@ -1,120 +1,120 @@
 {
-    "clientVersionCode":  261103132947,
+    "clientVersionCode":  261110003045,
     "versionCode":  1,
-    "versionName":  "14.cl261103132947",
+    "versionName":  "14.cl261110003045",
     "exe":  "PsykheField.exe",
     "serverExe":  "psykhe-server.exe",
-    "serverVersionCode":  261103132947,
-    "serverVersion":  "14.sv261103132947",
+    "serverVersionCode":  261110003045,
+    "serverVersion":  "14.sv261110003045",
     "protocolVersion":  14,
     "autoUpdateFrom":  0,
     "note":  "",
-    "releasedAt":  "2026-11-03 13:49",
-    "exeUrl":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/PsykheField.exe",
-    "serverExeUrl":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/psykhe-server.exe",
+    "releasedAt":  "2026-11-10 01:50",
+    "exeUrl":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/PsykheField.exe",
+    "serverExeUrl":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/psykhe-server.exe",
     "client":  {
-                   "code":  261103132947,
-                   "name":  "14.cl261103132947",
+                   "code":  261110003045,
+                   "name":  "14.cl261110003045",
                    "boot":  "335ef567e128919a",
-                   "exeUrl":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/PsykheField.exe",
-                   "exeSha256":  "c6471617e7ce8087662a5ef99dcb4f9ca7a2cef94c5c306d9aaa6bdaeaf78ee0",
-                   "exeSize":  122529072,
+                   "exeUrl":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/PsykheField.exe",
+                   "exeSha256":  "f6ef2ae838670a288e1619e536794b401ed95595916be08819dc2aaa78ea5458",
+                   "exeSize":  127236208,
                    "packs":  [
                                  {
                                      "name":  "game",
-                                     "sha256":  "ae59b7a613f579992fe9475e6611d712ebf6b2f36fc7409659e607ba3a5972e5",
-                                     "size":  575984,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/game.pck"
+                                     "sha256":  "76027ecb29d46bbd672baf36cef7baf9d6d42a21666f10d58ff8f7a724678022",
+                                     "size":  698240,
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/game.pck"
                                  },
                                  {
                                      "name":  "models-IzIz",
                                      "sha256":  "2886e8ab882417575c087677e463c1b2bb5db15fb014e3656184b82de14cff9f",
                                      "size":  13823264,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/models-IzIz.pck"
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/models-IzIz.pck"
                                  },
                                  {
-                                     "name":  "models-Type-A",
-                                     "sha256":  "c45459de62d980998781da83dd543692b8aadd6818412de42b7dc62b6adf3850",
-                                     "size":  28864,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/models-Type-A.pck"
+                                     "name":  "models-TypA00-",
+                                     "sha256":  "b9450296599f3fbe6c4765ba96d9b8d554fb4e59dd5624912b6ee5d2d7db4061",
+                                     "size":  42432,
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/models-TypA00-.pck"
                                  },
                                  {
-                                     "name":  "models-Type-B",
-                                     "sha256":  "d4377ffa7327dc086c5862f9dc4ac579be87c4efcb6074f7daaa655e7dd212b5",
-                                     "size":  31712,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/models-Type-B.pck"
+                                     "name":  "models-TypB00-",
+                                     "sha256":  "19e36ee24581903bac88dc33c0b0e0b508ea1e359de10c934bc2fc48a08270d1",
+                                     "size":  45728,
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/models-TypB00-.pck"
                                  },
                                  {
-                                     "name":  "models-Type-C",
-                                     "sha256":  "edb977957875e54def2a73784b2d28d9771517ce29255436d2d9fd81698d15a5",
-                                     "size":  37184,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/models-Type-C.pck"
+                                     "name":  "models-TypC00-",
+                                     "sha256":  "632a64d238ee4adaec8867784639f1ca311560073ecea84419c83bebf8fc0ace",
+                                     "size":  50432,
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/models-TypC00-.pck"
                                  },
                                  {
-                                     "name":  "models-Type-D",
-                                     "sha256":  "a7f258938de4f8974261e775696cebf68f0aeac81915a1436a2ebe153aafc89a",
-                                     "size":  28384,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/models-Type-D.pck"
+                                     "name":  "models-TypD00-",
+                                     "sha256":  "2f6d7910362b0cae7a7f9ab2f80210fb5123673d764b2419ee4b60ebd7a0dcbc",
+                                     "size":  41760,
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/models-TypD00-.pck"
                                  },
                                  {
-                                     "name":  "models-Type-E",
-                                     "sha256":  "8ef059039f0a50cedf36889dbacbfd168c64b71daffe315711e267351e16382e",
-                                     "size":  30272,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/models-Type-E.pck"
+                                     "name":  "models-TypE00-",
+                                     "sha256":  "eb035120a273572affc2555d476f60381f91edfd76347cac638ed395a089dc52",
+                                     "size":  44416,
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/models-TypE00-.pck"
                                  },
                                  {
-                                     "name":  "models-Type-F",
-                                     "sha256":  "2190bb9c0b42eaf3a0f5e5006e59d4b5381789ee72f9da57f04be40fb0bea683",
-                                     "size":  30656,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/models-Type-F.pck"
+                                     "name":  "models-TypF00-",
+                                     "sha256":  "deacf02983f7726f7521cb724655a192f648bac9191ce49e47e73e05afca7fec",
+                                     "size":  44192,
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/models-TypF00-.pck"
                                  },
                                  {
-                                     "name":  "models-Type-G",
-                                     "sha256":  "af7cf87d31570e6359968023f3e0231a1d199fd4dddd2260c23196a6c7980ce0",
-                                     "size":  29312,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/models-Type-G.pck"
+                                     "name":  "models-TypG00-",
+                                     "sha256":  "a68f2bec7f924e9ec31e88d0243987490c8fbc0213b389ecc14471d0bb180c8e",
+                                     "size":  43136,
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/models-TypG00-.pck"
                                  },
                                  {
-                                     "name":  "models-Type-H",
-                                     "sha256":  "9bd3896b6c88d85c12b721c242990e0df8c6cfd3a83aa3b7ab59c1a6e442548f",
-                                     "size":  31552,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/models-Type-H.pck"
+                                     "name":  "models-TypH00-",
+                                     "sha256":  "c119af08a81d41cd9896e20f7e4db39b1437d27b855afe12a27fce38266e674b",
+                                     "size":  45280,
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/models-TypH00-.pck"
                                  },
                                  {
                                      "name":  "models-base",
-                                     "sha256":  "d121d75cd76ed720abe1cd8fe1ecda71d67dfc1a0731f8e7ade86e0ad31c198a",
-                                     "size":  27584,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/models-base.pck"
+                                     "sha256":  "74f8e87e739fc3df2ef87e96376baba264ff19622b0b67f71bbaf2c878b8d891",
+                                     "size":  41440,
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/models-base.pck"
                                  },
                                  {
                                      "name":  "practice",
-                                     "sha256":  "e42b356f44572c22cb06555e5ef61d26aa4f1e9a1cacd65d4fb2e18ec6335ce6",
-                                     "size":  9682336,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/practice.pck"
+                                     "sha256":  "d15722b65e577a7e362493ff876cde05aec141710911606dce3a97ced163872e",
+                                     "size":  14143872,
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/practice.pck"
                                  },
                                  {
                                      "name":  "sounds",
                                      "sha256":  "3b59da6d502d4f15c534a18f2f97be31e7eb7d42127e874f83ce317b1c61ed89",
                                      "size":  386848,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/sounds.pck"
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/sounds.pck"
                                  },
                                  {
                                      "name":  "weapons-gun",
                                      "sha256":  "6fffbf5714512a40afdf10ef8df962780bafbf4b9d8f1cabbf7efc6976c871f2",
                                      "size":  3296,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/weapons-gun.pck"
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/weapons-gun.pck"
                                  },
                                  {
                                      "name":  "weapons-sword",
                                      "sha256":  "da5fd8f70029e1de688c125429706422e10b635129ae33ed979fc7c9fdbbe948",
                                      "size":  1568,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/weapons-sword.pck"
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/weapons-sword.pck"
                                  },
                                  {
                                      "name":  "weapons-vulcan",
                                      "sha256":  "0cae9a5473212b8d156394035de711ec8ec19cd75b244170f95812e9a0f266c6",
                                      "size":  14656,
-                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261103132947-261103132947/weapons-vulcan.pck"
+                                     "url":  "https://github.com/izizchan/psykhefield/releases/download/r261110003045-261110003045/weapons-vulcan.pck"
                                  }
                              ]
                }
